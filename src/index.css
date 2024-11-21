@@ -1,0 +1,23 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.btn-outline-primary {
+  border-width: 2px;
+  transition: transform 0.2s;
+}
+
+.btn-outline-primary:hover {
+  transform: scale(1.05);
+  background-color: #007bff;
+  color: #fff;
+}
+
+h1, h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
