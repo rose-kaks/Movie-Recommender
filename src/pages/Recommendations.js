@@ -43,7 +43,7 @@ const Recommendations = () => {
                         <p className="no-movies-text">No unwatched movies found for this mood.</p>
                     )}
                 </div>
-                
+
             </div>
         </div>
     );
