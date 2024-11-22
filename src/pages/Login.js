@@ -6,6 +6,15 @@ const LoginPage = () => {
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
+     const loginUser = async (credentials) => {
+        try {
+            const response = await axios.post("https://your-backend-url.com/api/login", credentials);
+            return response.data; // assuming the response contains the token in response.data.token
+        } catch (error) {
+            throw new Error("Login failed!"); // Handle errors gracefully
+        }
+    };
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
