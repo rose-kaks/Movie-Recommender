@@ -1,19 +1,26 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { loginUser } from "../utils/api";
 
 const LoginPage = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
-    const handleSubmit = async (e) => {
+    // Function to handle login
+    const handleSubmit = (e) => {
         e.preventDefault();
-        try {
-            const response = await loginUser({ email, password });
-            localStorage.setItem("token", response.data.token); // Save token
-            navigate("/"); // Redirect to home
-        } catch (error) {
+
+        // Get users data from localStorage
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+
+        // Find user with matching email and password
+        const user = users.find((user) => user.email === email && user.password === password);
+
+        if (user) {
+            // If user found, store token in localStorage
+            localStorage.setItem("token", "fake-jwt-token"); // You can replace with real token logic if needed
+            navigate("/"); // Redirect to homepage or dashboard
+        } else {
             alert("Login failed! Please check your credentials.");
         }
     };

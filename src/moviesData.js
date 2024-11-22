@@ -9,6 +9,10 @@ const moviesData = [
     { id: 8, title: "Jumanji", mood: "Adventurous", watched: false },
     { id: 9, title: "The Fault in Our Stars", mood: "Sad", watched: true },
     { id: 10, title: "A Beautiful Mind", mood: "Sad", watched: false },
+    { id: 11, title: "3 Idiots", mood: "Motivated", watched: false },
+    { id: 12, title: "Hera Pheri", mood: "Happy", watched: false },
+    { id: 13, title: "12th Fail", mood: "Motivated", watched: false },
+    { id: 14, title: "Stree", mood: "Scared", watched: false },
 ];
 
 export default moviesData;

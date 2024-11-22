@@ -13,7 +13,7 @@ const Home = () => {
             <h1 className="display-4">Find Movies Based on Your Mood 🎬</h1>
             <p className="lead">Select your mood, and we'll recommend the perfect movies for you!</p>
             <div className="row mt-4">
-                {["Happy", "Sad", "Romantic", "Adventurous", "Scared"].map((mood) => (
+                {["Happy", "Sad", "Romantic", "Adventurous", "Scared", "Motivated"].map((mood) => (
                     <div className="col-md-4 mb-3" key={mood}>
                         <button
                             className="btn btn-lg btn-outline-primary w-100"

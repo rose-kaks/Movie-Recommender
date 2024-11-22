@@ -24,13 +24,13 @@
 
 /* Specific styles for watched and unwatched items */
 .watched-item {
-    background-color: #d4f4dd;
-    color: #2b662b;
+    background-color: #7bff00;
+    color: black;
 }
 
 .unwatched-item {
-    background-color: #fde2e4;
-    color: #a94442;
+    background-color: #FF007B;
+    color: #fde2e4;
 }
 
 .list-group-item:hover {
