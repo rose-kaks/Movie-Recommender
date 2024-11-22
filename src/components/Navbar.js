@@ -18,11 +18,11 @@ const Navbar = () => {
                             <Link className="nav-link" to="/watchlist">Watchlist</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/Login-Signup">Login</Link>
+                            <Link className="nav-link" to="/Login">Login</Link>
                         </li>
-                        // <li className="nav-item">
-                        //     <Link className="nav-link" to="/Signup">Sign-up</Link>
-                        // </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/Signup">Sign-up</Link>
+                        </li>
                     </ul>
                 </div>
             </div>
