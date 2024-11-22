@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Auth.css";
 
 const Auth = () => {
     const [isLogin, setIsLogin] = useState(true); // Toggle between Login and Signup
