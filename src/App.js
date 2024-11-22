@@ -11,8 +11,9 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/watchlist" element={<Watchlist />} />
-                 <Route path="/login" element={<login />} />
-                    <Route path="/signup" element={<signup />} />
+                <Route path="/login" element={<login />} />
+                <Route path="/signup" element={<signup />} />
+                <Route path="*" element={<Home />} />
             </Routes>
         </Router>
     );
