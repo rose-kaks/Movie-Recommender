@@ -18,7 +18,7 @@ const Navbar = () => {
                             <Link className="nav-link" to="/Watchlist">Watchlist</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/Auth">Login/Sign-up</Link>
+                            <Link className="nav-link" to="/auth">Login/Sign-up</Link>
                         </li>
                         // <li className="nav-item">
                         //     <Link className="nav-link" to="/Signup">Sign-up</Link>
