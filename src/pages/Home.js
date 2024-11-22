@@ -5,9 +5,7 @@ const Home = () => {
     const navigate = useNavigate();
 
     const handleMoodSelection = (mood) => {
-        // For now, log mood to console. This will later fetch data.
-        console.log("Selected mood:", mood);
-        navigate("/watchlist"); // Navigate to another page for now.
+        navigate(`/recommendations/${mood}`); // Pass mood as a route parameter.
     };
 
     return (

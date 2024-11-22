@@ -1,0 +1,45 @@
+
+.recommendation-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Section heading */
+.section-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #0072ff;
+    margin-bottom: 10px;
+}
+
+/* Watched and Unwatched movie items */
+.list-group-item {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: all 0.2s;
+}
+
+/* Specific styles for watched and unwatched items */
+.watched-item {
+    background-color: #d4f4dd;
+    color: #2b662b;
+}
+
+.unwatched-item {
+    background-color: #fde2e4;
+    color: #a94442;
+}
+
+.list-group-item:hover {
+    transform: translateX(5px);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* No movies text */
+.no-movies-text {
+    font-style: italic;
+    color: #888;
+}
