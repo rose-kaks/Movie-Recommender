@@ -4,8 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Recommendations from "./pages/Recommendations";
 import Watchlist from "./pages/Watchlist";
-import Login from "pages/Login";
-import Signup from "pages/Signup";
+import Auth from "./pages/Auth";
 
 function App() {
     return (
@@ -15,8 +14,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/recommendations/:mood" element={<Recommendations />} />
                 <Route path="/watchlist" element={<Watchlist />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/signup" element={<Signup />} />
+                <Route path="/auth" element={<Auth />} />
                 <Route path="*" element={<Home />} />
             </Routes>
         </Router>

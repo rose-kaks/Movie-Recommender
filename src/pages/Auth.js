@@ -1,36 +1,41 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const AuthPage = () => {
-    const [isLogin, setIsLogin] = useState(true);
-    const [name, setName] = useState("");
+const Auth = () => {
+    const [isLogin, setIsLogin] = useState(true); // Toggle between Login and Signup
+    const [name, setName] = useState(""); // Only used for Signup
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
         if (isLogin) {
+            // Login flow
             const users = JSON.parse(localStorage.getItem("users")) || [];
             const user = users.find((user) => user.email === email && user.password === password);
+
             if (user) {
-                localStorage.setItem("token", "fake-jwt-token");
+                localStorage.setItem("token", "fake-jwt-token"); // Mock token
                 alert("Login successful!");
-                navigate("/");
+                navigate("/"); // Redirect to home
             } else {
                 alert("Invalid email or password");
             }
         } else {
+            // Signup flow
             const users = JSON.parse(localStorage.getItem("users")) || [];
             const existingUser = users.find((user) => user.email === email);
+
             if (existingUser) {
-                alert("Email already registered!");
+                alert("Email is already registered!");
             } else {
                 const newUser = { name, email, password };
                 users.push(newUser);
                 localStorage.setItem("users", JSON.stringify(users));
                 alert("Signup successful! Please log in.");
-                setIsLogin(true);
+                setIsLogin(true); // Switch to login form
             }
         }
     };
@@ -64,7 +69,7 @@ const AuthPage = () => {
                 />
                 <button type="submit">{isLogin ? "Login" : "Signup"}</button>
             </form>
-            <div className="toggle-form">
+            <div>
                 {isLogin ? (
                     <p>
                         Don't have an account?{" "}
@@ -85,4 +90,4 @@ const AuthPage = () => {
     );
 };
 
-export default AuthPage;
+export default Auth;
