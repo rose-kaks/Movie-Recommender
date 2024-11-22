@@ -2,41 +2,71 @@
     max-width: 400px;
     margin: 50px auto;
     text-align: center;
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid #444; /* Subtle dark border */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Deep shadow for better depth */
 }
 
 .auth-page form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px; /* Increased spacing for better readability */
 }
 
 .auth-page input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 12px;
+    border: 1px solid #555; /* Darker border to blend with the theme */
+    background-color: #282c34; /* Matches dark theme */
+    color: #e0e0e0; /* Light text for contrast */
+    border-radius: 6px;
     font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.auth-page input:focus {
+    border-color: #61dafb; /* Blue accent for focus state */
+    box-shadow: 0 0 8px rgba(97, 218, 251, 0.6); /* Glow effect */
+    outline: none;
 }
 
 .auth-page button {
-    padding: 10px;
-    background-color: #4caf50;
+    padding: 12px;
+    background-color: #4caf50; /* Green button color */
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add smooth hover effect */
 }
 
 .auth-page button:hover {
     background-color: #45a049;
+    transform: scale(1.05); /* Subtle zoom effect */
 }
 
 .auth-page span {
     cursor: pointer;
     font-weight: bold;
+    color: #61dafb; /* Blue accent color */
     text-decoration: underline;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.auth-page span:hover {
+    color: #4caf50; /* Green on hover for consistency */
+}
+
+/* Additional Tweaks */
+.auth-page h1, 
+.auth-page h2, 
+.auth-page h3 {
+    color: #ffffff; /* Ensure headers are visible on dark background */
+}
+
+.auth-page p {
+    color: #cccccc; /* Softer color for less prominent text */
 }

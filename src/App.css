@@ -1,3 +1,9 @@
+body {
+  background-color: #1c1f26; /* Dark background color as fallback */
+  font-family: 'Arial', sans-serif;
+  color: #e0e0e0; /* Light text color for readability */
+}
+
 .App {
   text-align: center;
 }
@@ -14,18 +20,28 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: rgba(40, 44, 52, 0.85); /* Semi-transparent dark overlay */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #ffffff; /* White text */
+  backdrop-filter: blur(4px); /* Slight blur for a modern look */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
 }
 
 .App-link {
   color: #61dafb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.App-link:hover {
+  color: #4caf50; /* Green highlight on hover */
 }
 
 @keyframes App-logo-spin {
@@ -41,10 +57,11 @@
   max-width: 400px;
   margin: 50px auto;
   text-align: center;
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: rgba(44, 47, 56, 0.95); /* Dark background for forms */
+  border: 1px solid #444; /* Subtle border */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Deeper shadow for depth */
 }
 
 .auth-page form {
@@ -54,29 +71,65 @@
 }
 
 .auth-page input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 12px;
+  border: 1px solid #555; /* Slightly darker border */
+  background-color: #282c34; /* Matches dark theme */
+  color: #e0e0e0;
+  border-radius: 6px;
   font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-page input:focus {
+  border-color: #61dafb;
+  box-shadow: 0 0 8px rgba(97, 218, 251, 0.6); /* Glow effect */
+  outline: none;
 }
 
 .auth-page button {
-  padding: 10px;
+  padding: 12px;
   background-color: #4caf50;
-  color: white;
+  color: #ffffff;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .auth-page button:hover {
   background-color: #45a049;
+  transform: scale(1.05); /* Slight zoom-in effect */
 }
 
 .auth-page span {
   cursor: pointer;
   font-weight: bold;
+  color: #61dafb;
   text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.auth-page span:hover {
+  color: #4caf50; /* Green on hover */
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.container {
+  padding: 20px;
+}
+
+/* Adjustments for readability on dark backgrounds */
+h1, h2, h3 {
+  color: #ffffff; /* Clear text color */
+}
+
+p {
+  color: #cccccc; /* Softer color for less prominent text */
 }
 

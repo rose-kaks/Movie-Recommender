@@ -5,9 +5,21 @@ import Home from "./pages/Home";
 import Recommendations from "./pages/Recommendations";
 import Watchlist from "./pages/Watchlist";
 import Auth from "./pages/Auth";
+import cineSelect from "./cineSelect.jpeg";
 
 function App() {
     return (
+
+        <div
+            style={{
+                backgroundImage: `url(${cineSelect})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                minHeight: "100vh",
+            }}
+            className="background"
+        >
         <Router>
             <Navbar />
             <Routes>
@@ -18,6 +30,7 @@ function App() {
                 <Route path="*" element={<Home />} />
             </Routes>
         </Router>
+        </div>
     );
 }
 
