@@ -7,15 +7,25 @@ const SignupPage = () => {
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        try {
-            await signupUser({ name, email, password });
-            alert("Signup successful! Please log in.");
-            navigate("/login"); // Redirect to login page
-        } catch (error) {
-            alert("Signup failed! Please try again.");
+
+        // Check if a user already exists with the same email
+        const existingUser = JSON.parse(localStorage.getItem("users")) || [];
+        const userExists = existingUser.some((user) => user.email === email);
+
+        if (userExists) {
+            alert("User already exists! Please log in.");
+            return;
         }
+
+        // Store the new user in localStorage
+        const newUser = { name, email, password };
+        existingUser.push(newUser);
+        localStorage.setItem("users", JSON.stringify(existingUser));
+
+        alert("Signup successful! Please log in.");
+        navigate("/Login"); // Redirect to login page
     };
 
     return (
