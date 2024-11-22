@@ -7,6 +7,7 @@ const SignupPage = () => {
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
+    // Function to handle signup and store user in localStorage
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -25,7 +26,7 @@ const SignupPage = () => {
         localStorage.setItem("users", JSON.stringify(existingUser));
 
         alert("Signup successful! Please log in.");
-        navigate("/Login"); // Redirect to login page
+        navigate("/login"); // Redirect to login page
     };
 
     return (
